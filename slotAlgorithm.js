@@ -77,8 +77,4 @@ let resultLines = findLineForFaces(resultFaces, winLines, precomputeLineCombinat
 
 let displayFaces = makeDisplayFaces(resultFaces, resultLines, winLines)
 
-
-
-
-
-
+console.log("Hello World\n")
