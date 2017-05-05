@@ -1,0 +1,25 @@
+{
+  "name": "slotalgorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "idea.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://0angelic0@github.com/0angelic0/slotAlgorithm.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0angelic0/slotAlgorithm/issues"
+  },
+  "homepage": "https://github.com/0angelic0/slotAlgorithm#readme",
+  "devDependencies": {
+    "should": "^11.2.1"
+  }
+}
