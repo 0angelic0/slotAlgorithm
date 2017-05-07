@@ -1,11 +1,21 @@
 class SlotAlgorithm {
-
+  
+  constructor(props){
+    if(props!=undefined){
+      this.NUMBER_OF_LINE = props.NUMBER_OF_LINE
+      this.NUMBER_OF_FACE = props.NUMBER_OF_FACE
+      this.NUMBER_OF_COLUMNS = props.NUMBER_OF_COLUMNS
+      this.NUMBER_OF_ROWS = props.NUMBER_OF_ROWS
+    }
+  }
   randomNumLine() {
-    return 3
+    //TODO: ค่อยทำทีหลัง
+    return 2
   }
 
   randomFaces(numLine) {
     // อาจจะต้อง Downgrade ถ้าเกิด Random ออกมาซ้ำ Faces กัน เช่น ครั้งแรกออก 3f1 ครั้งที่สองออก 4f1 ต้อง Downgrade ครั้งที่สองเป็น 3f1
+    
     return ['3f1', '3f1', '5f2']
   }
 
