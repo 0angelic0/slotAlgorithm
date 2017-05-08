@@ -22,7 +22,7 @@ const faceReward = [
 ]
 
 let precomputeLineCombinationSameFaceResult
-function precomputeLineCombinationSameFace(winLines) {
+function precomputeLineCombinationSameFace(winLines) { // Completed
   // หาความสัมพันธ์ว่าถ้า Faces เดียวกันแล้วใช้ Line นี้ เช่น '1,2,3' มีโอกาสจะได้ Line จริงๆ มากกว่านั้น รวมแล้วมี Line อะไรบ้าง
   // ทำคู่ 2 Line และ 3 Line
   precomputeLineCombinationResult = {
