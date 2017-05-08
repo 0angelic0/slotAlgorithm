@@ -1,4 +1,4 @@
-class CreateFace{
+class CreateFace {
     constructor(props){
         if(props){
             this.NUMBER_OF_COLUMNS = props.NUMBER_OF_COLUMNS
@@ -6,6 +6,7 @@ class CreateFace{
             this.faceList = this.createFaceAndNumFace(this.NUMBER_OF_FACE,this.NUMBER_OF_COLUMNS)
         }
     }
+    
     createFaceAndNumFace(numFaces,numCol){
         let temp = []
         for(let i = 3; i<=numCol; i++){
