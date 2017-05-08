@@ -1,14 +1,23 @@
 let should = require('should')
 const PreComputeLineCombinationOnSameFace = require('../src/PreComputeLineCombinationOnSameFace')
-
+const Slot = require('../src/Slot')
 describe('Test PreComputeLineCombinationSameFace class',function(){
     it('generate combiList when numOfLine = 3',function(){
+        
         let winLines = [
             [1,2,3],
             [4,5,6],
             [7,8,9]
         ]
-        let preComputeLineCombinationOnSameFace = new PreComputeLineCombinationOnSameFace({winLines:winLines,rows:3,cols:3})
+        let slot = new Slot(
+            {
+                NUMBER_OF_ROWS:3,
+                NUMBER_OF_COLUMNS:3,
+                NUMBER_OF_FACE:11,
+                WIN_LINES:winLines,
+            }
+        )
+        let preComputeLineCombinationOnSameFace = new PreComputeLineCombinationOnSameFace(slot)
         let obj = new Set([
             [0,0,0],
             [0,0,1],
@@ -29,7 +38,15 @@ describe('Test PreComputeLineCombinationSameFace class',function(){
             [7,2,9],
             [1,8,3]
         ]
-        let preComputeLineCombinationOnSameFace = new PreComputeLineCombinationOnSameFace({winLines:winLines,rows:5,cols:5})
+        let slot = new Slot(
+            {
+                NUMBER_OF_ROWS:3,
+                NUMBER_OF_COLUMNS:5,
+                NUMBER_OF_FACE:11,
+                WIN_LINES:winLines,
+            }
+        )
+        let preComputeLineCombinationOnSameFace = new PreComputeLineCombinationOnSameFace(slot)
         let obj = new Set([
             [0,0,0,0,0],
             [0,0,0,0,1],
@@ -196,7 +213,7 @@ describe('Test PreComputeLineCombinationSameFace class',function(){
             [1,1,0],
             [1,1,1]
         ]
-        
+    
         let winLines = [
             [1,2,3], //0
             [4,5,6], //1
@@ -215,7 +232,7 @@ describe('Test PreComputeLineCombinationSameFace class',function(){
         obj[[0,2]] = [0,2]
         obj[[1,2]] = [1,2]
         obj[[0,1,2]] = [0,1,2,3,4,5,6]
-        
+    
         let preComputeLineCombinationOnSameFace = new PreComputeLineCombinationOnSameFace()
         preComputeLineCombinationOnSameFace.createMapTable(combiList,winLines,3,3).should.eql(obj)
     

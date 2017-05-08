@@ -1,20 +1,22 @@
+const Slot = require('./slot')
 function arraysEqual(a1,a2) {
     /* WARNING: arrays must not contain {objects} or behavior may be undefined */
     return JSON.stringify(a1)==JSON.stringify(a2);
 }
 
 class PreComputeLineCombinationOnSameFace {
-    constructor(props){
-        if(props){
+    constructor(slot){
+        if(slot){
+            this.slot = slot
             this.LIMIT_OF_ONE = 3
-            this.NUMBER_OF_ROWS = props.rows
-            this.NUMBER_OF_COLS = props.cols
-            this.winLines = props.winLines
             this.combiList = new Set()
-            this.calculateCombinationLineOnSameFace(0,0,this.winLines,this.winLines.length)
-            this.power3SetOfWinLines = this.createLineFromCombiList(this.combiList,this.winLines)
-            this.mapTable = this.createMapTable(this.combiList,this.winLines,this.NUMBER_OF_COLS,this.NUMBER_OF_ROWS)
-            console.log(this.mapTable)
+            this.calculateCombinationLineOnSameFace(0,0,this.slot.winLines,this.slot.winLines.length)
+            this.power3SetOfWinLines = this.createLineFromCombiList(this.combiList,this.slot.winLines)
+            this.mapTable = this.createMapTable(this.combiList,
+                                                this.slot.winLines,
+                                                this.slot.NUMBER_OF_COLUMNS,
+                                                this.slot.NUMBER_OF_ROWS)
+            
         }
     }
     createMapTable(combiList,winLines,cols,rows){
