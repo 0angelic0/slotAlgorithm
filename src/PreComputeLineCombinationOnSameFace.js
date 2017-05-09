@@ -4,6 +4,24 @@ function arraysEqual(a1,a2) {
     return JSON.stringify(a1)==JSON.stringify(a2);
 }
 
+/*
+    PreComputeLineCombinationOnSameFace is a class which produce a mapTable.
+    A mapTable will map array of index of winLines and return the result.
+    The result is an array which contain index of winlines.
+    For Example.
+    let winLines = [[1,2,3], <- index 0
+                    [4,5,6], <- index 1
+                    [7,8,9], <- index 2
+                    [4,2,3], <- index 3
+                    ]
+    If we pick index 0,1 and put item in a slot table(3*3).
+    The slot will look like :
+    [1,1,1]
+    [1,1,1]
+    [0,0,0]
+    For each element of winlines. The element index 0,1,3 will hit the table,
+    so  mapTable[[0,1]] will produce [0,1,3]
+*/
 class PreComputeLineCombinationOnSameFace {
     constructor(slot){
         if(slot){
@@ -16,6 +34,7 @@ class PreComputeLineCombinationOnSameFace {
                                                 this.slot.winLines,
                                                 this.slot.NUMBER_OF_COLUMNS,
                                                 this.slot.NUMBER_OF_ROWS)
+            //this.mapTable[[1,2]] -> [1,2,4,6,8] something like this.
             
         }
     }

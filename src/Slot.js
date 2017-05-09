@@ -1,7 +1,6 @@
 class Slot{
     /*
     {
-        NUMBER_OF_LINE:,
         NUMBER_OF_ROWS:,
         NUMBER_OF_COLUMNS:,
         MIN_BET_PER_LINE:,

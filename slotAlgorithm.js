@@ -1,12 +1,7 @@
 class SlotAlgorithm {
     
-    constructor(props){
-        if(props){
-            this.NUMBER_OF_LINE = props.NUMBER_OF_LINE
-            this.NUMBER_OF_FACE = props.NUMBER_OF_FACE
-            this.NUMBER_OF_COLUMNS = props.NUMBER_OF_COLUMNS
-            this.NUMBER_OF_ROWS = props.NUMBER_OF_ROWS
-        }
+    constructor(slot){
+        this.slot = slot
     }
     randomNumLine() {
         //TODO: ค่อยทำทีหลัง
